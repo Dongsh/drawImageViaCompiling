@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA4FF9D51C1AB0C9005806A3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9D41C1AB0C9005806A3 /* main.swift */; };
+		DA4FF9DF1C1AB11D005806A3 /* cfile.c in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9DC1C1AB11D005806A3 /* cfile.c */; settings = {ASSET_TAGS = (); }; };
+		DA4FF9E01C1AB11D005806A3 /* node.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9DE1C1AB11D005806A3 /* node.swift */; settings = {ASSET_TAGS = (); }; };
+		DA4FF9E21C1AB130005806A3 /* Lexter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9E11C1AB130005806A3 /* Lexter.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		DA4FF9D11C1AB0C9005806A3 /* DrawImage_Lexter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DrawImage_Lexter; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4FF9D41C1AB0C9005806A3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DA4FF9DB1C1AB11C005806A3 /* DrawImage_Lexter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawImage_Lexter-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA4FF9DC1C1AB11D005806A3 /* cfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfile.c; sourceTree = "<group>"; };
+		DA4FF9DE1C1AB11D005806A3 /* node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = node.swift; sourceTree = "<group>"; };
+		DA4FF9E11C1AB130005806A3 /* Lexter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,11 @@
 		DA4FF9D31C1AB0C9005806A3 /* DrawImage_Lexter */ = {
 			isa = PBXGroup;
 			children = (
+				DA4FF9E11C1AB130005806A3 /* Lexter.swift */,
+				DA4FF9DC1C1AB11D005806A3 /* cfile.c */,
+				DA4FF9DE1C1AB11D005806A3 /* node.swift */,
 				DA4FF9D41C1AB0C9005806A3 /* main.swift */,
+				DA4FF9DB1C1AB11C005806A3 /* DrawImage_Lexter-Bridging-Header.h */,
 			);
 			path = DrawImage_Lexter;
 			sourceTree = "<group>";
@@ -88,6 +99,7 @@
 		DA4FF9C91C1AB0C9005806A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Dongsh;
 				TargetAttributes = {
@@ -119,6 +131,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4FF9D51C1AB0C9005806A3 /* main.swift in Sources */,
+				DA4FF9DF1C1AB11D005806A3 /* cfile.c in Sources */,
+				DA4FF9E01C1AB11D005806A3 /* node.swift in Sources */,
+				DA4FF9E21C1AB130005806A3 /* Lexter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,14 +221,21 @@
 		DA4FF9D91C1AB0C9005806A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DrawImage_Lexter/DrawImage_Lexter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DA4FF9DA1C1AB0C9005806A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DrawImage_Lexter/DrawImage_Lexter-Bridging-Header.h";
 			};
 			name = Release;
 		};
