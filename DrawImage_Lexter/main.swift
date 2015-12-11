@@ -20,7 +20,7 @@ var p = 0
 var m = 0
 var n = 0
 var row = 0
-var sum = 0
+var sum:Double = 0
 let PI = 3.141592653589793
 
 var rw = ["ORIGIN","SCALE","ROT","IS","TO","STEP","DRAW","FOR","FROM","PI",","]     //保留字集合

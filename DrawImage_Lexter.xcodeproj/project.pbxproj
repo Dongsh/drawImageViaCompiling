@@ -11,6 +11,7 @@
 		DA4FF9DF1C1AB11D005806A3 /* cfile.c in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9DC1C1AB11D005806A3 /* cfile.c */; settings = {ASSET_TAGS = (); }; };
 		DA4FF9E01C1AB11D005806A3 /* node.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9DE1C1AB11D005806A3 /* node.swift */; settings = {ASSET_TAGS = (); }; };
 		DA4FF9E21C1AB130005806A3 /* Lexter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9E11C1AB130005806A3 /* Lexter.swift */; settings = {ASSET_TAGS = (); }; };
+		DADD05B21C1AF95600FB0CB4 /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD05B11C1AF95600FB0CB4 /* parser.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 		DA4FF9DC1C1AB11D005806A3 /* cfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfile.c; sourceTree = "<group>"; };
 		DA4FF9DE1C1AB11D005806A3 /* node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = node.swift; sourceTree = "<group>"; };
 		DA4FF9E11C1AB130005806A3 /* Lexter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexter.swift; sourceTree = "<group>"; };
+		DADD05B11C1AF95600FB0CB4 /* parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4FF9E11C1AB130005806A3 /* Lexter.swift */,
+				DADD05B11C1AF95600FB0CB4 /* parser.swift */,
 				DA4FF9DC1C1AB11D005806A3 /* cfile.c */,
 				DA4FF9DE1C1AB11D005806A3 /* node.swift */,
 				DA4FF9D41C1AB0C9005806A3 /* main.swift */,
@@ -133,6 +136,7 @@
 				DA4FF9D51C1AB0C9005806A3 /* main.swift in Sources */,
 				DA4FF9DF1C1AB11D005806A3 /* cfile.c in Sources */,
 				DA4FF9E01C1AB11D005806A3 /* node.swift in Sources */,
+				DADD05B21C1AF95600FB0CB4 /* parser.swift in Sources */,
 				DA4FF9E21C1AB130005806A3 /* Lexter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +262,7 @@
 				DA4FF9DA1C1AB0C9005806A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

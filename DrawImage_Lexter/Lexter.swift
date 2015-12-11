@@ -53,8 +53,24 @@ func scaner(){
         sum = 0;
         while(ch.characterAtIndex(0) >= 48 && ch.characterAtIndex(0) <= 57){
             
-            sum = (Int)(ch.characterAtIndex(0))+(sum * 10-48)
+            sum = (Double)(ch.characterAtIndex(0)) + (Double)(sum * 10-48)
             ch = prog[p++] as! NSString
+        }
+
+        if ch.isEqualTo("."){
+            ch = prog[p++] as! NSString
+            var temi = 0;
+            var sum2:Double = 0
+            while(ch.characterAtIndex(0) >= 48 && ch.characterAtIndex(0) <= 57){
+                sum2 = (Double)(ch.characterAtIndex(0)) + (Double)(sum2 * 10-48)
+                temi++
+                ch = prog[p++] as! NSString
+            }
+            while temi > 0 {
+                sum2 = sum2/10
+                temi--
+            }
+            sum = sum + sum2
         }
         p--
         syn = 11
@@ -118,15 +134,14 @@ func scaner(){
         case"/":
             syn=17
             token[0]=ch
-//        case"**":syn=25
-//        token[0]=ch
         case";":syn=26
         token[0]=ch
         case"(":syn=27
         token[0]=ch
         case")":syn=28
         token[0]=ch
-        case".":syn=29
+        case".":
+            syn = -1             //若语句中单独出现.则直接判错
         token[0]=ch
         case",":syn=30
         token[0] = ch
@@ -142,9 +157,6 @@ func scaner(){
     }
 }
 
-//func aNodeS(type:Int,str:String){
-//    
-//}
 
 func flowIntoNodeflow(){
     p = 0
@@ -153,7 +165,7 @@ func flowIntoNodeflow(){
         scaner()
         switch syn{
         case -1:
-            print("ERROR in row \(row)! \n")
+            print("----ERROR in row \(row)!----")
         case -2:
             row++
             
@@ -174,12 +186,11 @@ func flowIntoNodeflow(){
             //           ---- 其他 ----
             
             var tempStr:String = String()
-            for var i in 0..<token.count{
-                
-                var temp:NSString = token[i] as! NSString//.substringToIndex(1)
+            for var i in 0..<token.count{                   // 字符串还原
+                let temp:NSString = token[i] as! NSString//.substringToIndex(1)
                 tempStr += temp as String
-            }                                   // 字符串还原
-            
+                i++
+            }
             if syn > 0 && syn <= 9{
                 let symbol = rw[syn-1];
                 tempStr = symbol

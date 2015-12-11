@@ -13,9 +13,9 @@ void getString(char *str) {
     int i = 0;
     do{
         temp = getchar();
-        if (temp == '\n')
-            a[i] = ' ';
-        else
+//        if (temp == '\n')
+//            a[i] = ' ';
+//        else
             a[i] = temp;
         i++;
     }while (temp != '#');
