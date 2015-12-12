@@ -39,13 +39,13 @@ func scaner(){
             
             let tempRW:NSString = rw[i]
             if (temp.caseInsensitiveCompare(tempRW as String) == NSComparisonResult.OrderedSame ) {
-                if i == 9 {
-                    syn = 99
+//                if i == 9 {
+//                    syn = 99
+//                    break
+//                } else{
+                    syn = i+70
                     break
-                } else{
-                    syn = i+1
-                    break
-                }
+//                }
             }
             
         }
@@ -170,7 +170,7 @@ func flowIntoNodeflow(){
             row++
             
             
-        case 99:        // ---- 常数π ----
+        case 79:        // ---- 常数π ----
             print("(Num,π)")
             let newNode = node.init(type:101 , inString:"", invalue: PI)
             nodeFlow.append(newNode);
@@ -191,10 +191,10 @@ func flowIntoNodeflow(){
                 tempStr += temp as String
                 i++
             }
-            if syn > 0 && syn <= 9{
-                let symbol = rw[syn-1];
+            if syn >= 70 && syn <= 100{
+                let symbol = rw[syn-70];
                 tempStr = symbol
-                let newNode = node.init(type:110+syn , inString:symbol, invalue:0)
+                let newNode = node.init(type:syn , inString:symbol, invalue:0)
                 print("(Operator,",terminator:"")
                 nodeFlow.append(newNode);
             } else if syn > 12 && syn <= 30 {

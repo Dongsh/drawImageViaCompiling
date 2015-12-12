@@ -23,7 +23,7 @@ var row = 0
 var sum:Double = 0
 let PI = 3.141592653589793
 
-var rw = ["ORIGIN","SCALE","ROT","IS","TO","STEP","DRAW","FOR","FROM","PI",","]     //保留字集合
+var rw = ["ORIGIN","SCALE","ROT","IS","TO","STEP","DRAW","FOR","FROM","PI","SIN","COS","TEN"]     //保留字集合
 
 //var flow2Node:NSMutableDictionary = []
 var nodeFlow:Array<node> = []
