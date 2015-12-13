@@ -64,12 +64,18 @@ class Parser {
         guard case let Token.Identifier(name) = popCurrentToken() else {
             throw Errors.UnexpectedToken
         }
-        
+        switch peekCurrentToken(){
+        case Token.Identifier("IS") :
+            popCurrentToken()
+        default:
+            break
+        }
         guard case Token.ParensOpen = peekCurrentToken() else {
             return VariableNode(name: name)
         }
-        popCurrentToken()
         
+        popCurrentToken()
+
         var arguments = [ExprNode]()
         if case Token.ParensClose = peekCurrentToken() {
         }
@@ -93,6 +99,7 @@ class Parser {
     }
     
     func parsePrimary() throws -> ExprNode {
+        
         switch (peekCurrentToken()) {
         case .Identifier:
             return try parseIdentifier()
