@@ -8,28 +8,11 @@
 
 import Foundation
 
-
-class node{
-    var type:Int
-    var inString:String
-	var inValue:Double
-    init(type:Int,inString:String,invalue:Double){
-        self.type = type
-        self.inString = inString
-        self.inValue = invalue
-    }
-}
-
-
-
-// ------------
-
-
 public protocol ExprNode: CustomStringConvertible {
 }
 
 public struct NumberNode: ExprNode {
-    public let value: Float
+    public let value: Double
     public var description: String {
         return "NumberNode(\(value))"
     }
@@ -74,8 +57,3 @@ public struct FunctionNode: CustomStringConvertible {
         return "FunctionNode(prototype: \(prototype), body: \(body))"
     }
 }
-
-
-
-
-

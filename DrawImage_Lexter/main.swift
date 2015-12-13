@@ -26,13 +26,13 @@ let PI = 3.141592653589793
 var rw = ["ORIGIN","SCALE","ROT","IS","TO","STEP","DRAW","FOR","FROM","PI","SIN","COS","TEN"]     //保留字集合
 
 //var flow2Node:NSMutableDictionary = []
-var nodeFlow:Array<node> = []
+//var nodeFlow:Array<node> = []
 
 
 
 // ----- main Func ------
 
-func main(){
+
     
     p = 0
     row = 1
@@ -42,28 +42,40 @@ func main(){
     
     var tempString = UnsafeMutablePointer<CChar>.alloc(100)
     getString(tempString)
-    let resString = String.fromCString(tempString)
+//    let resString = String.fromCString(tempString)
+
+    
+//    var inputString:NSString = resString!
+
     
     
-    var inputString:NSString = resString!
+    //let source = multiline(
+    ////    "def foo(x, y)",
+    ////    "  xa + y * 2 + (4+5) / 3",
+    ////    "",
+    ////    "foo(3,4)"
+    //)
     
-    var  maxI = inputString.length
-    for var i in 0..<maxI{
-        let a = inputString.substringToIndex(1)
-        prog[i] = a
-        if !inputString.isEqualTo(""){
-            inputString = inputString.substringFromIndex(1)
-        }
+    let source = String.fromCString(tempString)
+    
+    let lexer = LexerRE(input: source!)
+    print(lexer)
+    let tokens = lexer.tokenize()
+    print(tokens)
+    
+    print("\n")
+    let parser = Parser(tokens: tokens)
+    do {
+        print(try parser.parse())
         
     }
-    
-    flowIntoNodeflow()
+    catch {
+        print(error)
+    }
 
-//    print("\n\n\n")
+    print("---- end ----")
 
-}
 
-main()
 
 
 

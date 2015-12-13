@@ -12,6 +12,8 @@
 		DA4FF9E01C1AB11D005806A3 /* node.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9DE1C1AB11D005806A3 /* node.swift */; settings = {ASSET_TAGS = (); }; };
 		DA4FF9E21C1AB130005806A3 /* Lexter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4FF9E11C1AB130005806A3 /* Lexter.swift */; settings = {ASSET_TAGS = (); }; };
 		DADD05B21C1AF95600FB0CB4 /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD05B11C1AF95600FB0CB4 /* parser.swift */; settings = {ASSET_TAGS = (); }; };
+		DAEB16C61C1D3C4400DF59F5 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB16C51C1D3C4400DF59F5 /* Regex.swift */; settings = {ASSET_TAGS = (); }; };
+		DAEB16C81C1D3C8400DF59F5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB16C71C1D3C8400DF59F5 /* String.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,8 @@
 		DA4FF9DE1C1AB11D005806A3 /* node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = node.swift; sourceTree = "<group>"; };
 		DA4FF9E11C1AB130005806A3 /* Lexter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexter.swift; sourceTree = "<group>"; };
 		DADD05B11C1AF95600FB0CB4 /* parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
+		DAEB16C51C1D3C4400DF59F5 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		DAEB16C71C1D3C8400DF59F5 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				DA4FF9E11C1AB130005806A3 /* Lexter.swift */,
+				DAEB16C51C1D3C4400DF59F5 /* Regex.swift */,
+				DAEB16C71C1D3C8400DF59F5 /* String.swift */,
 				DADD05B11C1AF95600FB0CB4 /* parser.swift */,
 				DA4FF9DC1C1AB11D005806A3 /* cfile.c */,
 				DA4FF9DE1C1AB11D005806A3 /* node.swift */,
@@ -137,7 +143,9 @@
 				DA4FF9DF1C1AB11D005806A3 /* cfile.c in Sources */,
 				DA4FF9E01C1AB11D005806A3 /* node.swift in Sources */,
 				DADD05B21C1AF95600FB0CB4 /* parser.swift in Sources */,
+				DAEB16C81C1D3C8400DF59F5 /* String.swift in Sources */,
 				DA4FF9E21C1AB130005806A3 /* Lexter.swift in Sources */,
+				DAEB16C61C1D3C4400DF59F5 /* Regex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
